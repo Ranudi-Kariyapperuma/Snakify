@@ -64,15 +64,23 @@ public class signup extends AppCompatActivity {
             public void onClick(View view)
             {
                 progressBar.setVisibility(View.VISIBLE);
-                String email, password;
+                String email,username, password;
                 email = String.valueOf(editTextEmail.getText());
+                username = String.valueOf(editTextUsername.getText());
                 password = String.valueOf(editTextPassword.getText());
+
 
               if(TextUtils.isEmpty(email))
               {
                   Toast.makeText(signup.this, "Please Enter Email", Toast.LENGTH_SHORT).show();
                   return;
               }
+
+                if(TextUtils.isEmpty(username))
+                {
+                    Toast.makeText(signup.this, "Please Enter Username", Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
               if(TextUtils.isEmpty(password))
               {
