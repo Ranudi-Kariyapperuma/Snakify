@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Snakify</string>
+    <string name="login_btn">LOGIN</string>
+    <string name="signup_btn">SIGN UP</string>
+    <string name="snakify">SNAKIFY</string>
+    <string name="logo_description">App Logo</string>
+    <string name="usericon">usericon</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="grassright">grassRight</string>
+    <string name="grassleft">grassleft</string>
+    <string name="grass">TODO</string>
+    <string name="login">LOGIN</string>
+    <string name="pass">Password</string>
+    <string name="user">TODO</string>
+    <string name="useri">Username</string>
+
+</resources>

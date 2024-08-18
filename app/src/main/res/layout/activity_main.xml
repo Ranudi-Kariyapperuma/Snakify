@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/front_background"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/myRelativeLayout"
+        android:layout_width="399dp"
+        android:layout_height="781dp"
+        android:background="@drawable/backgroundimg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384">
+
+
+        <ImageView
+            android:id="@+id/snakeLogo"
+            android:layout_width="178dp"
+            android:layout_height="175.7dp"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="150dp"
+            android:contentDescription="@string/logo_description"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/snakifyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="98dp"
+            android:layout_marginTop="350dp"
+            android:text="@string/snakify"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/loginbtn"
+            android:layout_width="200dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="480dp"
+            android:background="@drawable/gradient"
+            android:text="@string/login_btn"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/signupbtn"
+            android:layout_width="200dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="590dp"
+            android:background="@drawable/gradient"
+            android:text="@string/signup_btn"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
