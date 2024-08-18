@@ -26,8 +26,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615"
-        tools:ignore="VisualLintBounds">
+        app:layout_constraintVertical_bias="0.615">
 
         <ImageView
             android:id="@+id/grassLeft"
@@ -36,11 +35,9 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="-78dp"
-            android:layout_marginBottom="-190dp"
+            android:layout_marginBottom="-210dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/tree"
-            android:contentDescription="@string/grassleft"
-            tools:ignore="VisualLintBounds" />
+            android:src="@drawable/tree" />
 
 
         <ImageView
@@ -50,11 +47,17 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="-65dp"
-            android:layout_marginBottom="-240dp"
+            android:layout_marginBottom="-280dp"
             android:scaleType="fitCenter"
-            android:src="@drawable/tree"
-            android:contentDescription="@string/grass"
-            tools:ignore="VisualLintBounds" />
+            android:src="@drawable/tree" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:visibility="gone"
+            android:layout_marginTop="600dp"
+            android:layout_marginStart="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
 
         <Button
@@ -62,55 +65,76 @@
             android:layout_width="200dp"
             android:layout_height="72dp"
             android:layout_marginStart="100dp"
-            android:layout_marginTop="470dp"
+            android:layout_marginTop="430dp"
             android:background="@drawable/gradient"
-            android:text="@string/login"
+            android:text="LOGIN"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:textStyle="bold"
             app:backgroundTint="@null" />
 
+        <TextView
+            android:id="@+id/tvNewHere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="530dp"
+            android:textColor="@color/white"
+            android:text="New Here?"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/txtsignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:layout_marginStart="210dp"
+            android:layout_marginTop="530dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/yellow"
+            />
+
 
         <EditText
-            android:id="@+id/email"
+            android:id="@+id/username"
             android:layout_width="300dp"
             android:layout_height="55dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="270dp"
+            android:layout_marginTop="250dp"
             android:background="@drawable/custom_edittext"
-            android:drawableStart="@drawable/mail"
+            android:drawableStart="@drawable/user"
             android:drawablePadding="13dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
             android:elevation="10dp"
             android:ems="10"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
+            android:hint="Username"
+            android:inputType="text"
             android:paddingStart="13dp"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="RtlSymmetry,TextSizeCheck"
-            android:autofillHints="" />
+            />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_alignStart="@+id/email"
+            android:layout_alignStart="@+id/username"
             android:layout_marginStart="0dp"
-            android:layout_marginTop="360dp"
+            android:layout_marginTop="330dp"
             android:background="@drawable/custom_edittext"
             android:drawableStart="@drawable/password"
             android:drawablePadding="13dp"
             android:elevation="10dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
             android:ems="10"
-            android:hint="@string/pass"
+            android:hint="Password"
             android:inputType="textPassword"
             android:paddingStart="13dp"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            tools:ignore="RtlSymmetry,TextSizeCheck"
-            android:autofillHints="" />
+            />
 
 
         <ImageView
@@ -118,9 +142,8 @@
             android:layout_width="300dp"
             android:layout_height="130dp"
             android:layout_marginStart="45dp"
-            android:layout_marginTop="100dp"
-            app:srcCompat="@drawable/usericon"
-            android:contentDescription="@string/user" />
+            android:layout_marginTop="70dp"
+            app:srcCompat="@drawable/usericon" />
 
 
     </RelativeLayout>

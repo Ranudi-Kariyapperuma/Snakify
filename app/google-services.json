@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1064927625104",
+    "project_id": "snakify-app",
+    "storage_bucket": "snakify-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1064927625104:android:89cf35e13a080654b03d15",
+        "android_client_info": {
+          "package_name": "com.example.snakify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkh7eLKOdox3XnIMpsnaa3Z-uBvdx55nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
