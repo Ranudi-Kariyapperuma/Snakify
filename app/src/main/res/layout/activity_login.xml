@@ -98,20 +98,20 @@
 
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/email"
             android:layout_width="300dp"
             android:layout_height="55dp"
             android:layout_marginStart="50dp"
             android:layout_marginTop="250dp"
             android:background="@drawable/custom_edittext"
-            android:drawableStart="@drawable/user"
+            android:drawableStart="@drawable/mail"
             android:drawablePadding="13dp"
             android:textSize="20dp"
             android:textStyle="bold"
             android:elevation="10dp"
             android:ems="10"
-            android:hint="Username"
-            android:inputType="text"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
             android:paddingStart="13dp"
             android:textColor="@color/black"
             />
@@ -120,7 +120,7 @@
             android:id="@+id/password"
             android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_alignStart="@+id/username"
+            android:layout_alignStart="@+id/email"
             android:layout_marginStart="0dp"
             android:layout_marginTop="330dp"
             android:background="@drawable/custom_edittext"

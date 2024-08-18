@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_main);
+
         Button button=findViewById(R.id.loginbtn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent=new Intent(MainActivity.this,login.class);
                 startActivity(intent);
+
             }
         });
 
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent=new Intent(MainActivity.this,signup.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

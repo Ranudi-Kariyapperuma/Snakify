@@ -26,12 +26,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class signup extends AppCompatActivity {
 
-    TextInputEditText editTextEmail, editTextUsername, editTextPassword;
-    Button buttonSignup;
-    FirebaseAuth mAuth;
-    ProgressBar progressBar;
-    TextView textView;
-
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,72 +35,7 @@ public class signup extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_signup);
-        mAuth= FirebaseAuth.getInstance();
 
-        editTextEmail = findViewById(R.id.email);
-        editTextUsername = findViewById(R.id.username);
-        editTextPassword = findViewById(R.id.password);
-        buttonSignup = findViewById(R.id.signupbtn);
-        progressBar = findViewById(R.id.progressbar);
-        textView = findViewById(R.id.txtlogin);
-
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),login.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-
-        buttonSignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view)
-            {
-                progressBar.setVisibility(View.VISIBLE);
-                String email,username, password;
-                email = String.valueOf(editTextEmail.getText());
-                username = String.valueOf(editTextUsername.getText());
-                password = String.valueOf(editTextPassword.getText());
-
-
-              if(TextUtils.isEmpty(email))
-              {
-                  Toast.makeText(signup.this, "Please Enter Email", Toast.LENGTH_SHORT).show();
-                  return;
-              }
-
-                if(TextUtils.isEmpty(username))
-                {
-                    Toast.makeText(signup.this, "Please Enter Username", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-              if(TextUtils.isEmpty(password))
-              {
-                    Toast.makeText(signup.this, "Please Enter Password", Toast.LENGTH_SHORT).show();
-                    return;
-              }
-
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                progressBar.setVisibility(View.GONE);
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(signup.this, "Account Created",
-                                            Toast.LENGTH_SHORT).show();
-
-                                } else {
-                                    // If sign in fails, display a message to the user.
-                                    Toast.makeText(signup.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
-
-                                }
-                            }
-                        });
-            }
-        });
 
     }
 }
