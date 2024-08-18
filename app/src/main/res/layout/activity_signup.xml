@@ -4,6 +4,142 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/other_background"
     tools:context=".signup">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/toolbargradient"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/myRelativeLayout"
+        android:layout_width="399dp"
+        android:layout_height="781dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.152">
+
+        <ImageView
+            android:id="@+id/grassLeft"
+            android:layout_width="367dp"
+            android:layout_height="421dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-78dp"
+            android:layout_marginBottom="-211dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tree"
+            android:contentDescription="@string/grassleft" />
+
+
+        <ImageView
+            android:id="@+id/grassRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-65dp"
+            android:layout_marginBottom="-228dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tree"
+            android:contentDescription="@string/grassright" />
+
+        <Button
+            android:id="@+id/signupbtn"
+            android:layout_marginTop="590dp"
+            android:layout_marginStart="100dp"
+            android:layout_width="200dp"
+            android:background="@drawable/gradient"
+            app:backgroundTint="@null"
+            android:layout_height="72dp"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="@string/sign_up" />
+
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="290dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/mail"
+            android:drawablePadding="13dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="text"
+            android:paddingStart="13dp"
+            android:textColor="@color/black"
+            tools:ignore="RtlSymmetry,TextFields"
+            android:importantForAutofill="no" />
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="370dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/user"
+            android:drawablePadding="13dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:paddingStart="13dp"
+            android:textColor="@color/black"
+            tools:ignore="RtlSymmetry"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_alignStart="@+id/username"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="450dp"
+            android:background="@drawable/custom_edittext"
+            android:drawableStart="@drawable/password"
+            android:drawablePadding="13dp"
+            android:elevation="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:paddingStart="13dp"
+            android:textColor="@color/black"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints="no" />
+
+
+        <ImageView
+            android:id="@+id/usericon"
+            android:layout_width="300dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/usericon"
+            android:contentDescription="@string/usericon" />
+
+
+
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
