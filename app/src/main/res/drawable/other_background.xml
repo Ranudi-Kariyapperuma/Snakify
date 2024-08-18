@@ -4,4 +4,6 @@
         android:startColor="@color/jade"
         android:endColor="@color/black"
         android:angle="15"/>
+
+
 </shape>
