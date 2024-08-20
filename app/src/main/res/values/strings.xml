@@ -16,5 +16,9 @@
     <string name="pass">Password</string>
     <string name="user">TODO</string>
     <string name="useri">Username</string>
+    <string name="camera">camera</string>
+    <string name="identify">Identify</string>
+    <string name="Identify">Identify</string>
+    <string name="dashboard">Dashboard</string>
 
 </resources>

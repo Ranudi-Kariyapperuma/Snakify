@@ -26,7 +26,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152">
+        app:layout_constraintVertical_bias="0.152"
+        tools:ignore="VisualLintBounds">
 
     <ImageView
         android:id="@+id/grassLeft"
@@ -38,7 +39,8 @@
         android:layout_marginBottom="-211dp"
         android:scaleType="fitCenter"
         android:src="@drawable/tree"
-        android:contentDescription="@string/grassleft" />
+        android:contentDescription="@string/grassleft"
+        tools:ignore="VisualLintBounds" />
 
 
     <ImageView
@@ -51,7 +53,283 @@
         android:layout_marginBottom="-300dp"
         android:scaleType="fitCenter"
         android:src="@drawable/tree"
-        android:contentDescription="@string/grassright" />
+        android:contentDescription="@string/grassright"
+        tools:ignore="VisualLintBounds" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/dashboard"
+            android:textColor="@color/white"
+            android:textSize="43dp"
+            android:textStyle="bold"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="40dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="16dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="100dp"
+                android:layout_weight="0.5"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/dashboard">
+
+                <ImageView
+                    android:id="@+id/cameraimg"
+                    android:layout_width="100dp"
+                    android:layout_height="66dp"
+                    android:contentDescription="@string/camera"
+                    app:srcCompat="@drawable/camera"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/cameratxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed"/>
+
+                <TextView
+                    android:id="@+id/cameratxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/Identify"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/cameraimg"
+                    app:layout_constraintStart_toStartOf="@id/cameraimg"
+                    app:layout_constraintTop_toBottomOf="@id/cameraimg"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="100dp"
+                android:layout_weight="0.5"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/dashboard">
+
+                <ImageView
+                    android:id="@+id/searchimg"
+                    android:layout_width="100dp"
+                    android:layout_height="66dp"
+                    android:contentDescription="@string/camera"
+                    app:srcCompat="@drawable/search"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/searchtxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/searchtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Search"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/searchimg"
+                    app:layout_constraintStart_toStartOf="@id/searchimg"
+                    app:layout_constraintTop_toBottomOf="@id/searchimg"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="200dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="100dp"
+                android:layout_weight="0.5"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/dashboard">
+
+                <ImageView
+                    android:id="@+id/venomousimg"
+                    android:layout_width="100dp"
+                    android:layout_height="66dp"
+                    android:contentDescription="@string/camera"
+                    app:srcCompat="@drawable/venomous"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/venomoustxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/venomoustxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Venomous"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/venomousimg"
+                    app:layout_constraintStart_toStartOf="@id/venomousimg"
+                    app:layout_constraintTop_toBottomOf="@id/venomousimg"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="100dp"
+                android:layout_weight="0.5"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/dashboard">
+
+                <ImageView
+                    android:id="@+id/nonvenomousimg"
+                    android:layout_width="100dp"
+                    android:layout_height="66dp"
+                    android:contentDescription="@string/camera"
+                    app:srcCompat="@drawable/nonvenomous"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/nonvenomoustxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/nonvenomoustxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Non-venomous"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/nonvenomousimg"
+                    app:layout_constraintStart_toStartOf="@id/nonvenomousimg"
+                    app:layout_constraintTop_toBottomOf="@id/nonvenomousimg"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="400dp"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="100dp"
+                android:layout_weight="0.5"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/dashboard">
+
+                <ImageView
+                    android:id="@+id/accountimg"
+                    android:layout_width="100dp"
+                    android:layout_height="66dp"
+                    android:contentDescription="@string/camera"
+                    app:srcCompat="@drawable/account"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/accounttxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/accounttxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Account"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/accountimg"
+                    app:layout_constraintStart_toStartOf="@id/accountimg"
+                    app:layout_constraintTop_toBottomOf="@id/accountimg"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="100dp"
+                android:layout_weight="0.5"
+                android:layout_marginEnd="12dp"
+                android:background="@drawable/dashboard">
+
+                <ImageView
+                    android:id="@+id/firstaidimg"
+                    android:layout_width="100dp"
+                    android:layout_height="66dp"
+                    android:contentDescription="@string/camera"
+                    app:srcCompat="@drawable/firstaid"
+                    tools:ignore="MissingConstraints"
+                    android:layout_marginTop="30dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/firstaidtxt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/firstaidtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="First-Aid"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/firstaidimg"
+                    app:layout_constraintStart_toStartOf="@id/firstaidimg"
+                    app:layout_constraintTop_toBottomOf="@id/firstaidimg"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
 
 
 
