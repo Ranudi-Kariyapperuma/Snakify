@@ -20,5 +20,12 @@
     <string name="identify">Identify</string>
     <string name="Identify">Identify</string>
     <string name="dashboard">Dashboard</string>
+    <string name="user_account">User Account</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="users_name">Users Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="save">Save</string>
+    <string name="background">User Account</string>
 
 </resources>

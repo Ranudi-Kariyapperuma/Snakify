@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-public class account extends AppCompatActivity {
+public class venomus extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,6 +14,6 @@ public class account extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);
 
-        setContentView(R.layout.activity_account);
+        setContentView(R.layout.activity_venomus);
     }
 }

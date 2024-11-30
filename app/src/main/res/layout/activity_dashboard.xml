@@ -77,6 +77,7 @@
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/identifyLayout"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
                 android:layout_marginTop="100dp"
@@ -165,6 +166,7 @@
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/venomusLayout"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
                 android:layout_marginTop="100dp"
@@ -203,6 +205,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nonvenomusLayout"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
                 android:layout_marginStart="24dp"
@@ -253,6 +256,7 @@
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/accountLayout"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
                 android:layout_marginTop="100dp"
@@ -264,7 +268,6 @@
                     android:id="@+id/accountimg"
                     android:layout_width="100dp"
                     android:layout_height="66dp"
-                    android:contentDescription="@string/camera"
                     app:srcCompat="@drawable/account"
                     tools:ignore="MissingConstraints"
                     android:layout_marginTop="30dp"
@@ -291,6 +294,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/firstaidLayout"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
                 android:layout_marginStart="24dp"

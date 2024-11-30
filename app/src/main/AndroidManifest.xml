@@ -22,8 +22,24 @@
             android:name=".login"
             android:exported="false" />
         <activity
+            android:name=".account"
+            android:exported="false"/>
+        <activity
+            android:name=".identify"
+            android:exported="false"/>
+        <activity
+            android:name=".firstaid"
+            android:exported="false"/>
+        <activity
+            android:name=".venomus"
+            android:exported="false" />
+        <activity
+            android:name=".nonvenomus"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

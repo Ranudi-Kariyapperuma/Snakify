@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/other_background"
+    tools:context=".identify">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/toolbargradient"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Image Upload"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-medium"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/myRelativeLayout"
+        android:layout_width="399dp"
+        android:layout_height="781dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.152"
+        tools:ignore="VisualLintBounds">
+
+        <ImageView
+            android:id="@+id/grassLeft"
+            android:layout_width="367dp"
+            android:layout_height="421dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="-78dp"
+            android:layout_marginBottom="-211dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tree"
+            android:contentDescription="@string/grassleft"
+            tools:ignore="VisualLintBounds" />
+
+
+        <ImageView
+            android:id="@+id/grassRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-65dp"
+            android:layout_marginBottom="-300dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tree"
+            android:contentDescription="@string/grassright"
+            tools:ignore="VisualLintBounds" />
+
+        <ImageView
+            android:id="@+id/uploadIcon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="150dp"
+            android:src="@drawable/upload" />
+
+        <Button
+            android:id="@+id/uploadButton"
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="360dp"
+            android:backgroundTint="@color/black"
+            android:text="Upload Image"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.85" />
+
+
+        <TextView
+            android:id="@+id/instructionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click the upload button and add your image"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="460dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,17 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/other_background"
-    tools:context=".account" >
+    tools:context=".account"
+    >
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <ImageView
+        android:id="@+id/curveBackground"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:background="@drawable/toolbargradient"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/curve_background"
+        android:layout_alignParentTop="true"
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/background" />
 
     <RelativeLayout
         android:id="@+id/myRelativeLayout"
@@ -29,33 +30,106 @@
         app:layout_constraintVertical_bias="0.152"
         tools:ignore="VisualLintBounds">
 
-    <ImageView
-        android:id="@+id/grassLeft"
-        android:layout_width="368dp"
-        android:layout_height="421dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-78dp"
-        android:layout_marginBottom="-211dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/tree"
-        android:contentDescription="@string/grassleft"
-        tools:ignore="VisualLintBounds" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/user_account"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="UnknownId" />
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="180dp"
+            android:background="@drawable/rounded_circle"
+            android:src="@drawable/accuser"
+            android:contentDescription="@string/profile_picture"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
-        android:id="@+id/grassRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-65dp"
-        android:layout_marginBottom="-300dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/tree"
-        android:contentDescription="@string/grassright"
-        tools:ignore="VisualLintBounds" />
+        <EditText
+            android:id="@+id/nameField"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="300dp"
+            android:drawableStart="@drawable/user_icon"
+            android:drawablePadding="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="@string/users_name"
+            android:paddingStart="30dp"
+            android:background="@drawable/edittext_background"
+            android:textColorHint="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/profileImage"
+            tools:ignore="RtlSymmetry,TextFields"
+            android:autofillHints=""
+             />
 
+        <EditText
+            android:id="@+id/phoneField"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="380dp"
+            android:drawableStart="@drawable/phone_icon"
+            android:drawablePadding="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="@string/phone_number"
+            android:paddingStart="30dp"
+            android:inputType="phone"
+            android:background="@drawable/edittext_background"
+            android:textColorHint="@android:color/darker_gray"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints="" />
 
+        <EditText
+            android:id="@+id/emailField"
+            android:layout_width="330dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="460dp"
+            android:drawableStart="@drawable/email_icon"
+            android:drawablePadding="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:elevation="10dp"
+            android:ems="10"
+            android:hint="@string/email_address"
+            android:paddingStart="30dp"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edittext_background"
+            android:textColorHint="@android:color/darker_gray"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="560dp"
+            android:backgroundTint="@color/black"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.85" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
