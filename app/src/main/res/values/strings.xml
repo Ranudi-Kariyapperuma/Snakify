@@ -27,5 +27,6 @@
     <string name="email_address">Email Address</string>
     <string name="save">Save</string>
     <string name="background">User Account</string>
+    <string name="snake_details">Snake Details</string>
 
 </resources>
