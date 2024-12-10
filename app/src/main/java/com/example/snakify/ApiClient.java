@@ -4,15 +4,15 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
-
-    private static final String BASE_URL = "http://103.253.146.6:8000/predict";  // Your server URL
+    private static final String BASE_URL = "http://103.253.146.6:8000/";
     private static Retrofit retrofit;
 
+    // Singleton Pattern for Retrofit Client
     public static Retrofit getClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())  // Converter to handle JSON responses
+                    .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
         return retrofit;

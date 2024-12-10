@@ -6,5 +6,5 @@
     <color name="jade">#00A86B</color>
     <color name="gray">#E8EBEC</color>
     <color name="yellow">#ebd534</color>
-
+    <color name="lightgray">#D3D3D3</color> <!-- Light gray for border -->
 </resources>

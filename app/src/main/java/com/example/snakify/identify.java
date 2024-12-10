@@ -1,18 +1,23 @@
 package com.example.snakify;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,6 +34,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class identify extends AppCompatActivity {
     private static final int IMAGE_PICK_REQUEST = 1;
+    private static final int PERMISSION_REQUEST_CODE = 100;
     private Uri imageUri;
     private Button uploadButton;
 
@@ -44,10 +50,56 @@ public class identify extends AppCompatActivity {
         uploadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(intent, IMAGE_PICK_REQUEST);
+                if (checkPermission()) {
+                    openImagePicker(); // Open image picker if permission is granted
+                } else {
+                    requestPermission(); // Request permission
+                }
             }
         });
+    }
+
+    private boolean checkPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            // For Android 13 and above
+            return ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_MEDIA_IMAGES)
+                    == PackageManager.PERMISSION_GRANTED;
+        } else {
+            // For Android 6.0 to Android 12
+            return ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED;
+        }
+    }
+
+    private void requestPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            // For Android 13 and above
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.READ_MEDIA_IMAGES},
+                    PERMISSION_REQUEST_CODE);
+        } else {
+            // For Android 6.0 to Android 12
+            ActivityCompat.requestPermissions(this,
+                    new String[]{android.Manifest.permission.READ_EXTERNAL_STORAGE},
+                    PERMISSION_REQUEST_CODE);
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMISSION_REQUEST_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                openImagePicker(); // Open image picker after permission is granted
+            } else {
+                Toast.makeText(this, "Permission denied. Please allow access to select an image.", Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    private void openImagePicker() {
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(intent, IMAGE_PICK_REQUEST);
     }
 
     @Override
@@ -83,7 +135,7 @@ public class identify extends AppCompatActivity {
 
     private void uploadImage(File imageFile) {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://103.253.146.6:8000/predict")
+                .baseUrl("http://103.253.146.6:8000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -103,7 +155,9 @@ public class identify extends AppCompatActivity {
 
                         Intent intent = new Intent(identify.this, ResultsActivity.class);
                         intent.putExtra("response", responseBody);
+                        intent.putExtra("imageUri", imageUri.toString());
                         startActivity(intent);
+
                     } catch (IOException e) {
                         e.printStackTrace();
                         Log.e("API_ERROR", "Error parsing response", e);

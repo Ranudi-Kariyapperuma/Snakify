@@ -1,4 +1,5 @@
 package com.example.snakify;
+
 import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -8,7 +9,9 @@ import retrofit2.http.Part;
 
 public interface ApiService {
     @Multipart
-    @POST("predict") // Endpoint
+    @POST("predict") // Append relative path
     Call<ResponseBody> uploadImage(@Part MultipartBody.Part file);
+
+
 }
 

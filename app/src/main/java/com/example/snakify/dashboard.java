@@ -66,6 +66,18 @@ public class dashboard extends AppCompatActivity {
             }
         });
 
+        View searchLayout = findViewById(R.id.searchLayout);
+
+
+        searchLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(dashboard.this, search.class);
+                startActivity(intent);
+            }
+        });
+
 
         View accountLayout = findViewById(R.id.accountLayout);
 
