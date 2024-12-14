@@ -7,6 +7,17 @@
     android:background="@drawable/other_background"
     tools:context=".ResultsActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/toolbargradient"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
     <!-- Title TextView -->
     <TextView
         android:id="@+id/tvTitle"
@@ -15,7 +26,7 @@
         android:layout_marginTop="24dp"
         android:layout_marginStart="16dp"
         android:text="Identification Results"
-        android:textColor="#000000"
+        android:textColor="#FFFF"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -27,8 +38,8 @@
     <ImageView
         android:id="@+id/snakeImageView"
         android:layout_width="0dp"
-        android:layout_height="250dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="Snake Image"
