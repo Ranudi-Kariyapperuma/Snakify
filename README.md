@@ -18,4 +18,16 @@ The **Snake Identification Mobile App** is designed to help users identify vario
 - 🛠️ **Android Studio**: Java is used for the app's development.
 - 🔥 **Firebase**: Authentication and user management.
 
-  
+
+---
+
+<div align="center">
+
+## 📽️ Demo Video  
+
+<img src="https://github.com/user-attachments/assets/3b8d102c-584b-41a0-a39f-08f915a9fe26" alt="news app video" width="900"/>
+
+</div>
+
+
+---
