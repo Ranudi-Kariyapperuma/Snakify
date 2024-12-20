@@ -21,10 +21,13 @@ The **Snake Identification Mobile App** is designed to help users identify vario
 
 ---
 
+<div align="center">
 
 ## 📽️ Demo Video  
 
-https://github.com/user-attachments/assets/bd317dc8-89b7-4d02-aa24-1a53d3abbca2
+<img src="https://github.com/user-attachments/assets/bd317dc8-89b7-4d02-aa24-1a53d3abbca2" alt="news app video" width="900"/>
+
+</div>
 
 
 ---
