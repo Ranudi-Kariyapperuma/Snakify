@@ -2,19 +2,7 @@
 
 The **Snake Identification Mobile App** is designed to help users identify various snake species through image recognition. The app provides detailed information about snake species, such as their habitat, whether they are venomous or harmless, and first aid steps in case of a bite. This app is built using Android Studio (Java) and uses Firebase for authentication.
 
-## Image Slider Simulation
-
-<div align="center">
-  <a href="https://example.com/image1">
-    <img src="https://github.com/user-attachments/assets/409648c4-34d0-40ea-817c-7b795a90665b" alt="Image 1" width="300"/>
-  </a>
-  <a href="https://example.com/image2">
-    <img src="https://github.com/user-attachments/assets/0ce5ea25-92e7-45b5-9226-4e9bf66fb680" alt="Image 2" width="300"/>
-  </a>
-  <a href="https://example.com/image3">
-    <img src="https://github.com/user-attachments/assets/3f93046d-07cb-46f0-8d31-5ba262f8a7a6" alt="Image 3" width="300"/>
-  </a>
-</div>
+![Snake Identification App Banner](https://github.com/user-attachments/assets/67e336b0-1d62-437b-9f3a-d8927a6c3120)
 
 ## Features
 
