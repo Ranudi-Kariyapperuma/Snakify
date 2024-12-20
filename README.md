@@ -1,4 +1,7 @@
-<h1 align="center"> 🐍 Snake Identification Mobile Application - SNAKIFY APP </h1>
+<h1 align="center"> 🐍 Snake Identification Mobile Application  </h1>
+
+<h2 align="center"> --- Snakify App ---  </h2>
+
 
 The **Snake Identification Mobile App** is designed to help users identify various snake species through image recognition. The app provides detailed information about snake species, such as their habitat, whether they are venomous or harmless, and first aid steps in case of a bite. This app is built using Android Studio (Java) and uses Firebase for authentication.
 
